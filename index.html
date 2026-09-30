@@ -5,30 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academic Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Custom styles to ensure a clean, academic look similar to Google Sites */
+<style>
+        /* 1. The Colorful Animated Background */
         body {
-            font-family: 'Arial', 'Helvetica', sans-serif;
-            background-color: #ffffff;
-            color: #333333;
-            line-height: 1.6;
-        }
-        
-        /* Typography adjustments for a professional look */
-        h1, h2, h3 {
-            color: #1a1a1a;
-        }
-        
-        a {
-            color: #1a0dab; /* Classic Google-blue link color */
-            text-decoration: none;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #1f2937; /* Dark text for readability */
+            
+            /* Animated Gradient */
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientFlow 50s ease infinite;
+            background-attachment: fixed;
         }
 
+        @keyframes gradientFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* 2. The "Frosted Glass" Content Card */
+        body > div {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 40px;
+            
+            /* Glassmorphism Effect */
+            background: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+            backdrop-filter: blur(10px); /* Blurs the background behind the card */
+            -webkit-backdrop-filter: blur(10px);
+            
+            border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle white border */
+            border-radius: 16px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        /* 3. Link styling to match the colorful theme */
+        a {
+            color: #e73c7e;
+            text-decoration: none;
+            font-weight: bold;
+        }
         a:hover {
             text-decoration: underline;
         }
+
+        /* If using the Dark Crypto Theme (Option 2), change the card background to:
+           background: rgba(15, 23, 42, 0.85);
+           color: #f8fafc; 
+        */
     </style>
 </head>
+
 <body class="min-h-screen flex flex-col">
 
     <!-- Main Container -->
@@ -81,7 +110,7 @@
                             <h3 class="font-bold text-gray-800 mb-2">Research Focus</h3>
                             <ul class="list-disc pl-5 space-y-1 text-sm">
                                 <li><strong>Research Interests:</strong> [Cryptography & Hardware Security].</li>
-                                <li><strong>Keywords:</strong> Lattice, , Algebra.</li>
+                                <li><strong>Keywords:</strong> Lattice, Algebra.</li>
                             </ul>
                         </div>
 
